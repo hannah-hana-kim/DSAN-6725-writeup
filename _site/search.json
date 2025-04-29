@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Our Vision",
+    "section": "",
+    "text": "casual.ai\n\n\nCASUAL.AI is a smart outfit recommendation AI agent. The idea behind CASUAL.AI is to make daily outfit decisions faster and smarter. We wanted to solve an everyday problem: “What should I wear today?” - and more importantly, “What goes well together?”\nPeople often spend 15–20 minutes each day choosing an outfit, only to second-guess if it fits the occasion or the weather. CASUAL.AI reduces this decision fatigue by acting like a digital personal stylist.\nIt analyzes your wardrobe, the event type, and real-time weather to offer curated outfit suggestions. Over time, it learns from your choices and preferences to make even smarter recommendations.\nThe goal is to help users make better outfit choices by providing personalized recommendations based on their wardrobe, occasions, and the current weather conditions.\nCASUAL.AI works like a personalized stylist that helps users match clothes based on occasion and weather; just like a digital stylist that understands your wardrobe."
+  },
+  {
+    "objectID": "index.html#introduction",
+    "href": "index.html#introduction",
+    "title": "Our Vision",
+    "section": "",
+    "text": "casual.ai\n\n\nCASUAL.AI is a smart outfit recommendation AI agent. The idea behind CASUAL.AI is to make daily outfit decisions faster and smarter. We wanted to solve an everyday problem: “What should I wear today?” - and more importantly, “What goes well together?”\nPeople often spend 15–20 minutes each day choosing an outfit, only to second-guess if it fits the occasion or the weather. CASUAL.AI reduces this decision fatigue by acting like a digital personal stylist.\nIt analyzes your wardrobe, the event type, and real-time weather to offer curated outfit suggestions. Over time, it learns from your choices and preferences to make even smarter recommendations.\nThe goal is to help users make better outfit choices by providing personalized recommendations based on their wardrobe, occasions, and the current weather conditions.\nCASUAL.AI works like a personalized stylist that helps users match clothes based on occasion and weather; just like a digital stylist that understands your wardrobe."
+  },
+  {
+    "objectID": "conclusion.html",
+    "href": "conclusion.html",
+    "title": "Conclusion",
+    "section": "",
+    "text": "Conclusion"
+  },
+  {
+    "objectID": "data_prep.html",
+    "href": "data_prep.html",
+    "title": "Data Preprocessing",
+    "section": "",
+    "text": "We changed the filenames for the sake of data integrity and consistency.\n\n\n\n \nWe trained our agent using Kaggle’s clothing dataset, categorized into pants, shorts, shirts, and t-shirts.\n\n\n\n\n\n\nmetadata\n\n\nWe also created metadata manually including color, gender, and sleeve length"
+  },
+  {
+    "objectID": "data_prep.html#data-preprocessing",
+    "href": "data_prep.html#data-preprocessing",
+    "title": "Data Preprocessing",
+    "section": "",
+    "text": "We changed the filenames for the sake of data integrity and consistency.\n\n\n\n \nWe trained our agent using Kaggle’s clothing dataset, categorized into pants, shorts, shirts, and t-shirts.\n\n\n\n\n\n\nmetadata\n\n\nWe also created metadata manually including color, gender, and sleeve length"
+  },
+  {
+    "objectID": "data_prep.html#segmentation",
+    "href": "data_prep.html#segmentation",
+    "title": "Data Preprocessing",
+    "section": "Segmentation",
+    "text": "Segmentation\nWe applied image segmentation using HuggingFace’s SAM model to remove the background of the images in order to focus only on the clothing items."
+  },
+  {
+    "objectID": "model_1.html",
+    "href": "model_1.html",
+    "title": "Model 1",
+    "section": "",
+    "text": "Once the images were segmented, we extracted features from each using a ResNet-18 model. Resnet is one of the well-known models for image classification, and it was perfect for our data since Resnet is the best model for feature extraction. We were able to achieve 99.3% of accuracy from this model.\nOnce we achieved high accuracy, not only did we use cloth embeddings but we also built a similarity index using Faiss and saved our feature extraction model for use in the later stages.\nWhen evaluating the model, we tested similarity queries for random and top 5 matches, and also analyzed intra- and inter-class distances to confirm whether the embeddings were valid or not. We also visualized the embedding space using t-SNE, which showed clear separation between the categories.\nThese embeddings were essential for the second model, which we’ll get into next.”"
+  }
+]

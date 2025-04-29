@@ -1,0 +1,37 @@
+project:
+  type: website
+  resources: 
+    - "*.mp4"
+
+format:
+  html:
+    theme: lumen
+    toc: true
+    link-external-newwindow: true
+
+website:
+  navbar: 
+    search: true
+    left:
+      - text: "Our Vision"
+        href: index.ipynb
+      - text: "Data Preprocessing"
+        href: data_prep.ipynb
+      - text: "Model 1"
+        href:  model_1.ipynb
+      - text: "Model 2"
+        href: model_2.ipynb
+      - text: "RAG"
+        href: rag.ipynb
+      - text: "Demo and Conclusion"
+        href: conclusion.ipynb
+  
+    tools: 
+      - icon: github
+        url: https://github.com/hannah-hana-kim
+      
+    title: "CASUAL.AI"
+
+  favicon: images/vita.png
+
+bibliography: references.bib
