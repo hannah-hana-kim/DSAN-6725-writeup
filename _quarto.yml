@@ -15,8 +15,6 @@ website:
     left:
       - text: "Our Vision"
         href: index.ipynb
-      - text: "Data Preprocessing"
-        href: data_prep.ipynb
       - text: "Model 1"
         href:  model_1.ipynb
       - text: "Model 2"

@@ -94,10 +94,6 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Our Vision</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./data_prep.html"> 
-<span class="menu-text">Data Preprocessing</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./model_1.html"> 
 <span class="menu-text">Model 1</span></a>
   </li>  
@@ -108,6 +104,10 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item">
     <a class="nav-link" href="./rag.html"> 
 <span class="menu-text">RAG</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./future_work.html"> 
+<span class="menu-text">Future Work</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./conclusion.html"> 
@@ -130,7 +130,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#why-we-built-casual.ai" id="toc-why-we-built-casual.ai" class="nav-link" data-scroll-target="#why-we-built-casual.ai">Why We Built CASUAL.AI</a></li>
+  <li><a href="#example-use-case" id="toc-example-use-case" class="nav-link" data-scroll-target="#example-use-case">Example Use Case</a></li>
+  <li><a href="#what-casual.ai-does" id="toc-what-casual.ai-does" class="nav-link" data-scroll-target="#what-casual.ai-does">What CASUAL.AI Does</a></li>
+  <li><a href="#our-goal" id="toc-our-goal" class="nav-link" data-scroll-target="#our-goal">Our Goal</a></li>
+  </ul></li>
+  <li><a href="#data-preprocessing" id="toc-data-preprocessing" class="nav-link" data-scroll-target="#data-preprocessing">Data Preprocessing</a>
+  <ul class="collapse">
+  <li><a href="#file-renaming-for-consistency" id="toc-file-renaming-for-consistency" class="nav-link" data-scroll-target="#file-renaming-for-consistency">File Renaming for Consistency</a></li>
+  <li><a href="#dataset-source-kaggle-fashion-dataset" id="toc-dataset-source-kaggle-fashion-dataset" class="nav-link" data-scroll-target="#dataset-source-kaggle-fashion-dataset">Dataset Source: Kaggle Fashion Dataset</a></li>
+  <li><a href="#manual-metadata-annotation" id="toc-manual-metadata-annotation" class="nav-link" data-scroll-target="#manual-metadata-annotation">Manual Metadata Annotation</a></li>
+  </ul></li>
+  <li><a href="#image-segmentation" id="toc-image-segmentation" class="nav-link" data-scroll-target="#image-segmentation">Image Segmentation</a></li>
   </ul>
 </nav>
     </div>
@@ -151,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="quarto-title-meta-contents">
              <p>Hannah Kim </p>
              <p>Parsa Keyvani </p>
-             <p>Vrunda Hemel Shah </p>
+             <p>Vrunda Shah </p>
           </div>
   </div>
     
@@ -172,11 +185,102 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>casual.ai</figcaption>
 </figure>
 </div>
-<p>CASUAL.AI is a smart outfit recommendation AI agent. The idea behind CASUAL.AI is to make daily outfit decisions faster and smarter. We wanted to solve an everyday problem: <em>“What should I wear today?”</em> - and more importantly, <em>“What goes well together?”</em></p>
-<p>People often spend 15–20 minutes each day choosing an outfit, only to second-guess if it fits the occasion or the weather. CASUAL.AI reduces this decision fatigue by acting like a digital personal stylist.</p>
-<p>It analyzes your wardrobe, the event type, and real-time weather to offer curated outfit suggestions. Over time, it learns from your choices and preferences to make even smarter recommendations.</p>
-<p>The goal is to help users make better outfit choices by providing personalized recommendations based on their wardrobe, occasions, and the current weather conditions.</p>
-<p>CASUAL.AI works like a <strong>personalized stylist</strong> that helps users match clothes based on occasion and weather; just like a digital stylist that understands your wardrobe.</p>
+<p>CASUAL.AI is an intelligent, context-aware outfit recommendation system — your virtual stylist on demand. It was designed to tackle a surprisingly common daily problem:<br>
+“What should I wear today?” and more importantly, “What actually goes well together for what I’m doing?”</p>
+<section id="why-we-built-casual.ai" class="level3">
+<h3 class="anchored" data-anchor-id="why-we-built-casual.ai">Why We Built CASUAL.AI</h3>
+<p>For most people, picking the right outfit can be surprisingly stressful. It often takes 15–20 minutes, includes trying on multiple combinations, and ends in last-minute decisions that may not be ideal for the weather, occasion, or setting.</p>
+<p>We built CASUAL.AI to eliminate this daily friction and bring a sense of confidence and convenience to dressing up. Our system helps users make fast, stylish, and weather-appropriate clothing decisions using the items they already own — no shopping required.</p>
+</section>
+<section id="example-use-case" class="level3">
+<h3 class="anchored" data-anchor-id="example-use-case">Example Use Case</h3>
+<p>Imagine you have an important job interview at 10 AM, and it’s currently 32°C (90°F) outside.<br>
+You open CASUAL.AI, type in:<br>
+&gt; “I have an interview today, what should I wear?”</p>
+<p>The system instantly: - Checks the weather in your city<br>
+- Detects that it’s a formal occasion<br>
+- Filters your wardrobe to remove shorts or casual tees<br>
+- Applies color matching rules<br>
+- Presents you with 3 curated outfit options<br>
+- And finally, asks Anthropic’s Claude LLM to evaluate and suggest the best outfit, along with a natural explanation like:<br>
+&gt; “Go with the navy pants and white long-sleeve — sharp and breathable. Perfect for the weather and gives off a confident, professional vibe.”</p>
+</section>
+<section id="what-casual.ai-does" class="level3">
+<h3 class="anchored" data-anchor-id="what-casual.ai-does">What CASUAL.AI Does</h3>
+<ul>
+<li>Understands your wardrobe<br>
+</li>
+<li>Knows the context<br>
+</li>
+<li>Generates smart suggestions<br>
+</li>
+<li>Saves you time</li>
+</ul>
+</section>
+<section id="our-goal" class="level3">
+<h3 class="anchored" data-anchor-id="our-goal">Our Goal</h3>
+<p>The ultimate goal of CASUAL.AI is to simplify and elevate the way users dress.<br>
+Whether you’re heading to: - A formal event<br>
+- A casual hangout<br>
+- A gym session<br>
+- Or even a last-minute dinner</p>
+<p>CASUAL.AI helps you look good, feel prepared, and save time — without overthinking it.<br>
+It’s more than a recommendation system — it’s a smart, fashion-aware companion that grows with your style.</p>
+<hr>
+</section>
+</section>
+<section id="data-preprocessing" class="level2">
+<h2 class="anchored" data-anchor-id="data-preprocessing">Data Preprocessing</h2>
+<section id="file-renaming-for-consistency" class="level3">
+<h3 class="anchored" data-anchor-id="file-renaming-for-consistency">File Renaming for Consistency</h3>
+<p>To ensure data integrity and compatibility across our pipeline, we renamed all clothing image files following a standardized format. This helped maintain consistent references during feature extraction, metadata annotation, and model training.</p>
+<hr>
+</section>
+<section id="dataset-source-kaggle-fashion-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="dataset-source-kaggle-fashion-dataset">Dataset Source: Kaggle Fashion Dataset</h3>
+<p>We used a public Kaggle clothing dataset as the primary source for training. The dataset contained images of various clothing items, which we categorized into four main classes:</p>
+<ul>
+<li>Pants<br>
+</li>
+<li>Shorts<br>
+</li>
+<li>Shirts<br>
+</li>
+<li>T-shirts</li>
+</ul>
+<p>Below are sample inputs from the dataset:</p>
+<div style="display: flex; gap: 10px;">
+<p><img src="./images/15.jpg" alt="Pants Sample" width="200"> <img src="./images/07.jpg" alt="Shirts Sample" width="280"></p>
+</div>
+<p>The images varied in resolution, lighting, and orientation — making this dataset an excellent benchmark for building a real-world ready recommendation system.</p>
+<hr>
+</section>
+<section id="manual-metadata-annotation" class="level3">
+<h3 class="anchored" data-anchor-id="manual-metadata-annotation">Manual Metadata Annotation</h3>
+<p>To enhance context-aware outfit generation, we created a custom metadata file (<code>metadata.json</code>) that includes attributes such as:</p>
+<ul>
+<li>Color (e.g., black, beige, denim)<br>
+</li>
+<li>Category (pants, shirt, etc.)<br>
+</li>
+<li>Gender (male, female, unisex)<br>
+</li>
+<li>Sleeve length (short, long)</li>
+</ul>
+<p>This metadata allowed our system to filter wardrobe items based on occasion, weather, and user preferences.</p>
+<div style="text-align: center;">
+<p><img src="./images/metadata.png" alt="Metadata Sample" width="200"></p>
+</div>
+<hr>
+</section>
+</section>
+<section id="image-segmentation" class="level2">
+<h2 class="anchored" data-anchor-id="image-segmentation">Image Segmentation</h2>
+<p>To remove background noise and focus purely on the clothing item, we applied image segmentation using Hugging Face’s Segment Anything Model (SAM).</p>
+<p>Segmenting out the background helped us: - Improve classification accuracy by removing irrelevant visual cues<br>
+- Generate cleaner feature embeddings<br>
+- Build a visually consistent wardrobe UI for users</p>
+<p>This step was crucial in making sure that the model learned to identify clothes by their actual cut, shape, and style — not the background or setting in which they were photographed.</p>
 
 
 </section>
