@@ -23,6 +23,8 @@ website:
         href: model_2.ipynb
       - text: "RAG"
         href: rag.ipynb
+      - text: "Future Work"
+        href: future_work.ipynb
       - text: "Demo and Conclusion"
         href: conclusion.ipynb
   
