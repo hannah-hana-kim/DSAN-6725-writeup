@@ -3821,11 +3821,7 @@ vertical-align: -.125em;
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Our Vision</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./data_prep.html"> 
-<span class="menu-text">Data Preprocessing</span></a>
+<span class="menu-text">Our Vision &amp; Data Prep</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./model_1.html"> 
@@ -3894,7 +3890,7 @@ vertical-align: -.125em;
 
 <section id="retrieval-phase" class="level3">
 <h3 class="anchored" data-anchor-id="retrieval-phase">Retrieval Phase</h3>
-<p>The goal of this phase is to <strong>fetch the most contextually appropriate clothing items</strong> from the user’s wardrobe. This is achieved using the following components:</p>
+<p>The goal of this phase is to fetch the most contextually appropriate clothing items from the user’s wardrobe. This is achieved using the following components:</p>
 <ul>
 <li><p><strong>FAISS Index for Similarity Search</strong>:<br>
 We use FAISS to store and quickly retrieve clothing item embeddings. Given a user’s query, we use metadata (occasion, temperature, preferences) to search and rank compatible wardrobe items efficiently.</p></li>
@@ -3931,8 +3927,8 @@ We query the Claude LLM with a structured prompt that includes:
 </ul>
 Claude then:
 <ul>
-<li>Evaluates the <strong>vibe</strong> of each outfit (e.g., chill, sporty, bold)</li>
-<li>Chooses the <strong>most appropriate outfit</strong></li>
+<li>Evaluates the vibe of each outfit (e.g., chill, sporty, bold)</li>
+<li>Chooses the most appropriate outfit</li>
 <li>Returns a casual, human-like explanation, similar to texting a fashion-savvy friend</li>
 </ul></li>
 </ul>
@@ -3940,7 +3936,7 @@ Claude then:
 <section id="why-our-rag-setup-is-unique" class="level3">
 <h3 class="anchored" data-anchor-id="why-our-rag-setup-is-unique">Why our RAG Setup is Unique</h3>
 <p>Traditional RAG systems retrieve text documents and pass them to an LLM.<br>
-Our system, however, retrieves <strong>structured visual and metadata representations of clothing</strong>, enriched with <strong>real-world context</strong> like weather and occasion. This makes the recommendations not just accurate, but <strong>personalized, practical, and stylish</strong>.</p>
+Our system, however, retrieves structured visual and metadata representations of clothing, enriched with real-world context like weather and occasion. This makes the recommendations not just accurate, but personalized, practical, and stylish.</p>
 
 
 </section>

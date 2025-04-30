@@ -13,10 +13,8 @@ website:
   navbar: 
     search: true
     left:
-      - text: "Our Vision"
+      - text: "Our Vision/Data Prep"
         href: index.ipynb
-      - text: "Data Preprocessing"
-        href: data_prep.ipynb
       - text: "Model 1"
         href:  model_1.ipynb
       - text: "Model 2"
@@ -30,7 +28,7 @@ website:
   
     tools: 
       - icon: github
-        url: https://github.com/hannah-hana-kim
+        url: https://github.com/hannah-hana-kim/DSAN-6725-writeup/tree/main
       
     title: "CASUAL.AI"
 
